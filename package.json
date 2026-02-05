@@ -1,0 +1,19 @@
+{
+  "name": "context-war",
+  "version": "0.1.0",
+  "description": "Competitive prompt injection with real money",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:testnet": "npx hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network base"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "hardhat": "^2.28.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.0"
+  }
+}
