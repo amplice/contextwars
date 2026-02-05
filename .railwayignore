@@ -1,0 +1,10 @@
+node_modules
+.git
+cache
+artifacts
+test
+oracle
+scripts
+contracts
+*.md
+.env
