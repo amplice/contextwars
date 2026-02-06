@@ -15,21 +15,28 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 // ─── RPC Failover Pool ─────────────────────────────────
 const RPC_ENDPOINTS = [
   process.env.BASE_RPC_URL || 'https://1rpc.io/base',  // Primary (env override)
+  // Tier 1: Most reliable
   'https://mainnet.base.org',
-  'https://base.llamarpc.com',
   'https://1rpc.io/base',
+  'https://base.llamarpc.com',
   'https://base.publicnode.com',
+  'https://base-rpc.publicnode.com',
+  'https://rpc.ankr.com/base',
+  // Tier 2: Good reliability  
   'https://base.drpc.org',
   'https://base-public.nodies.app',
   'https://base.gateway.tenderly.co',
   'https://base.rpc.thirdweb.com',
   'https://base.api.onfinality.io/public',
+  'https://base.public.blockpi.network/v1/rpc/public',
+  // Tier 3: Backup endpoints
   'https://endpoints.omniatech.io/v1/base/mainnet/public',
   'https://base-rpc.polkachu.com',
   'https://base.rpc.subquery.network/public',
-  'https://base.public.blockpi.network/v1/rpc/public',
+  'https://base.rpc.blxrbdn.com',
   'https://base.leorpc.com/?api_key=FREE',
-  'https://base.rpc.blxrbdn.com'
+  'https://base-mainnet.gateway.tatum.io',
+  'https://api.blockeden.xyz/base/8UuXzatAZYDBJC6YZTKD',
 ];
 
 let currentRpcIndex = 0;
