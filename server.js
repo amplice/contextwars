@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, 'frontend')));
 
 // ─── RPC Failover Pool ─────────────────────────────────
 const RPC_ENDPOINTS = [
+  process.env.BASE_RPC_URL || 'https://1rpc.io/base',  // Primary (env override)
   'https://mainnet.base.org',
   'https://base.llamarpc.com',
   'https://1rpc.io/base',
