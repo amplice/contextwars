@@ -6,3 +6,4 @@ artifacts/
 cache/
 nox-monitor.js
 node_modules
+.railway/

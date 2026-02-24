@@ -185,7 +185,7 @@ function formatMessage(event, data) {
 
 // Wallet for server-side bids (agent API)
 const wallet = process.env.DEPLOYER_PRIVATE_KEY 
-  ? new ethers.Wallet(process.env.DEPLOYER_PRIVATE_KEY, provider)
+  ? new ethers.Wallet(process.env.DEPLOYER_PRIVATE_KEY, getProvider())
   : null;
 const walletContract = wallet ? new ethers.Contract(CONTRACT, ABI, wallet) : null;
 
